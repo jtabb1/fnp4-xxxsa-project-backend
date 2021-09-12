@@ -1,0 +1,1629 @@
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 03:37:55 -0400
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 03:37:55 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/campers"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/activities"):
+  
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 06:19:47 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 06:19:47 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.3.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 06:21:30 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 06:21:30 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 11:05:25 -0400
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 11:05:25 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 11:07:21 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 11:07:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 11:07:32 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 11:07:32 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-09-11 11:09:32 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-09-11 11:09:32 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210605122510_create_campers.rb
+20210605122531_create_activities.rb
+20210605122602_create_signups.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCampers (20210605122510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "campers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122510"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActivities (20210605122531)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "activities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "difficulty" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122531"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSignups (20210605122602)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "signups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "camper_id" integer NOT NULL, "activity_id" integer NOT NULL, "time" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f143361fe2"
+FOREIGN KEY ("camper_id")
+  REFERENCES "campers" ("id")
+, CONSTRAINT "fk_rails_bdc39d0617"
+FOREIGN KEY ("activity_id")
+  REFERENCES "activities" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_signups_on_camper_id" ON "signups" ("camper_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_signups_on_activity_id" ON "signups" ("activity_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122602"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-11 15:11:09.708553"], ["updated_at", "2021-09-11 15:11:09.708553"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-09-11 11:11:19 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jeremiahtabb/.rvm/gems/ruby-2.7.3/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jeremiahtabb/.rvm/gems/ruby-2.7.3/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.7ms | Allocations: 187)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 835)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-09-11 11:11:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 11:11:22 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 11:11:22 -0400
+Processing by ActivitiesController#index as */*
+Processing by CampersController#index as */*
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1694)
+
+
+  
+NameError (uninitialized constant ActivitiesController::Activity
+Did you mean?  ActionView):
+  
+app/controllers/activities_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1631)
+
+
+  
+NameError (uninitialized constant CampersController::Camper):
+  
+app/controllers/campers_controller.rb:6:in `index'
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 11:42:31 -0400
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 11:42:31 -0400
+Processing by CampersController#index as */*
+Processing by ActivitiesController#index as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1659)
+
+
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1805)
+
+
+  
+NameError (uninitialized constant CampersController::Camper):
+  
+app/controllers/campers_controller.rb:6:in `index'
+  
+NameError (uninitialized constant ActivitiesController::Activity
+Did you mean?  ActionView):
+  
+app/controllers/activities_controller.rb:5:in `index'
+Started GET "/campers" for ::1 at 2021-09-11 11:42:45 -0400
+Processing by CampersController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1619)
+
+
+  
+NameError (uninitialized constant CampersController::Camper):
+  
+app/controllers/campers_controller.rb:6:in `index'
+Started GET "/campers" for ::1 at 2021-09-11 11:43:14 -0400
+Processing by CampersController#index as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1619)
+
+
+  
+NameError (uninitialized constant CampersController::Camper):
+  
+app/controllers/campers_controller.rb:6:in `index'
+Started GET "/campers" for ::1 at 2021-09-11 11:43:35 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampersController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4825)
+
+
+  
+NameError (uninitialized constant CampersController::Camper):
+  
+app/controllers/campers_controller.rb:6:in `index'
+Started GET "/" for ::1 at 2021-09-11 11:43:39 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jeremiahtabb/.rvm/gems/ruby-2.7.3/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jeremiahtabb/.rvm/gems/ruby-2.7.3/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.9ms | Allocations: 182)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 834)
+
+
+Started GET "/campers" for ::1 at 2021-09-11 23:11:40 -0400
+Processing by CampersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+  [1m[36mCamper Load (0.5ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 27ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 4554)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCampers (20210605122510)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "campers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122510"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActivities (20210605122531)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "activities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "difficulty" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122531"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSignups (20210605122602)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "signups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "camper_id" integer NOT NULL, "activity_id" integer NOT NULL, "time" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f143361fe2"
+FOREIGN KEY ("camper_id")
+  REFERENCES "campers" ("id")
+, CONSTRAINT "fk_rails_bdc39d0617"
+FOREIGN KEY ("activity_id")
+  REFERENCES "activities" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_signups_on_camper_id" ON "signups" ("camper_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_signups_on_activity_id" ON "signups" ("activity_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122602"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-12 03:12:15.020924"], ["updated_at", "2021-09-12 03:12:15.020924"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Caitlin"], ["age", 8], ["created_at", "2021-09-12 03:12:15.046281"], ["updated_at", "2021-09-12 03:12:15.046281"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.3ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lizzie"], ["age", 9], ["created_at", "2021-09-12 03:12:15.052083"], ["updated_at", "2021-09-12 03:12:15.052083"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tom"], ["age", 12], ["created_at", "2021-09-12 03:12:15.054658"], ["updated_at", "2021-09-12 03:12:15.054658"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Morgan"], ["age", 15], ["created_at", "2021-09-12 03:12:15.056831"], ["updated_at", "2021-09-12 03:12:15.056831"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Danny"], ["age", 11], ["created_at", "2021-09-12 03:12:15.058555"], ["updated_at", "2021-09-12 03:12:15.058555"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Peter"], ["age", 10], ["created_at", "2021-09-12 03:12:15.060500"], ["updated_at", "2021-09-12 03:12:15.060500"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Amanda"], ["age", 9], ["created_at", "2021-09-12 03:12:15.062279"], ["updated_at", "2021-09-12 03:12:15.062279"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nick"], ["age", 12], ["created_at", "2021-09-12 03:12:15.064107"], ["updated_at", "2021-09-12 03:12:15.064107"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Archery"], ["difficulty", 2], ["created_at", "2021-09-12 03:12:15.069950"], ["updated_at", "2021-09-12 03:12:15.069950"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Swimming"], ["difficulty", 3], ["created_at", "2021-09-12 03:12:15.072199"], ["updated_at", "2021-09-12 03:12:15.072199"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Photography"], ["difficulty", 2], ["created_at", "2021-09-12 03:12:15.073965"], ["updated_at", "2021-09-12 03:12:15.073965"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arts & Crafts"], ["difficulty", 5], ["created_at", "2021-09-12 03:12:15.075646"], ["updated_at", "2021-09-12 03:12:15.075646"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kayaking"], ["difficulty", 3], ["created_at", "2021-09-12 03:12:15.077377"], ["updated_at", "2021-09-12 03:12:15.077377"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Fencing"], ["difficulty", 4], ["created_at", "2021-09-12 03:12:15.079265"], ["updated_at", "2021-09-12 03:12:15.079265"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Canoeing"], ["difficulty", 3], ["created_at", "2021-09-12 03:12:15.081328"], ["updated_at", "2021-09-12 03:12:15.081328"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Windsurfing"], ["difficulty", 5], ["created_at", "2021-09-12 03:12:15.083448"], ["updated_at", "2021-09-12 03:12:15.083448"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 1], ["activity_id", 2], ["time", 11], ["created_at", "2021-09-12 03:12:15.100388"], ["updated_at", "2021-09-12 03:12:15.100388"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.3ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 1], ["activity_id", 1], ["time", 12], ["created_at", "2021-09-12 03:12:15.105581"], ["updated_at", "2021-09-12 03:12:15.105581"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 1], ["activity_id", 4], ["time", 15], ["created_at", "2021-09-12 03:12:15.109531"], ["updated_at", "2021-09-12 03:12:15.109531"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 2], ["activity_id", 2], ["time", 11], ["created_at", "2021-09-12 03:12:15.113334"], ["updated_at", "2021-09-12 03:12:15.113334"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 2], ["activity_id", 1], ["time", 12], ["created_at", "2021-09-12 03:12:15.117008"], ["updated_at", "2021-09-12 03:12:15.117008"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.3ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 4], ["activity_id", 8], ["time", 16], ["created_at", "2021-09-12 03:12:15.121163"], ["updated_at", "2021-09-12 03:12:15.121163"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 5], ["activity_id", 7], ["time", 11], ["created_at", "2021-09-12 03:12:15.127380"], ["updated_at", "2021-09-12 03:12:15.127380"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 3], ["activity_id", 4], ["time", 12], ["created_at", "2021-09-12 03:12:15.131039"], ["updated_at", "2021-09-12 03:12:15.131039"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/campers" for ::1 at 2021-09-11 23:12:20 -0400
+Processing by CampersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:12:15.046281000 +0000", updated_at: "2021-09-12 03:12:15.046281000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (0.52ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 6450)
+
+
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:12:27 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:12:27 -0400
+Processing by CampersController#index as */*
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+Processing by ActivitiesController#index as */*
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:12:15.046281000 +0000", updated_at: "2021-09-12 03:12:15.046281000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (1.68ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 3151)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+No serializer found for resource: #<Activity id: 1, name: "Archery", difficulty: 2, created_at: "2021-09-12 03:12:15.069950000 +0000", updated_at: "2021-09-12 03:12:15.069950000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Activity::ActiveRecord_Relation (0.55ms)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 1.2ms | Allocations: 7032)
+
+
+Started DELETE "/activities/7" for 127.0.0.1 at 2021-09-11 23:33:20 -0400
+Processing by ActivitiesController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/activities_controller.rb:17:in `find_activity'
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:17:in `find_activity'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mSignup Load (0.8ms)[0m  [1m[34mSELECT "signups".* FROM "signups" WHERE "signups"."activity_id" = ?[0m  [["activity_id", 7]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mSignup Destroy (0.5ms)[0m  [1m[31mDELETE FROM "signups" WHERE "signups"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mActivity Destroy (0.1ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+Completed 204 No Content in 42ms (ActiveRecord: 3.1ms | Allocations: 11260)
+
+
+Started DELETE "/activities/6" for 127.0.0.1 at 2021-09-11 23:33:21 -0400
+Processing by ActivitiesController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:17:in `find_activity'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mSignup Load (0.3ms)[0m  [1m[34mSELECT "signups".* FROM "signups" WHERE "signups"."activity_id" = ?[0m  [["activity_id", 6]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mActivity Destroy (0.6ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 2.5ms | Allocations: 2447)
+
+
+Started DELETE "/activities/4" for 127.0.0.1 at 2021-09-11 23:33:22 -0400
+Processing by ActivitiesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:17:in `find_activity'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mSignup Load (0.2ms)[0m  [1m[34mSELECT "signups".* FROM "signups" WHERE "signups"."activity_id" = ?[0m  [["activity_id", 4]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mSignup Destroy (0.8ms)[0m  [1m[31mDELETE FROM "signups" WHERE "signups"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mSignup Destroy (0.2ms)[0m  [1m[31mDELETE FROM "signups" WHERE "signups"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mActivity Destroy (0.3ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+Completed 204 No Content in 17ms (ActiveRecord: 3.5ms | Allocations: 3717)
+
+
+Started DELETE "/activities/3" for 127.0.0.1 at 2021-09-11 23:33:22 -0400
+Processing by ActivitiesController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:17:in `find_activity'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mSignup Load (0.2ms)[0m  [1m[34mSELECT "signups".* FROM "signups" WHERE "signups"."activity_id" = ?[0m  [["activity_id", 3]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mActivity Destroy (0.9ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/activities_controller.rb:10:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 2.9ms | Allocations: 2431)
+
+
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:33:29 -0400
+Processing by CampersController#index as */*
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:33:29 -0400
+  [1m[36mCamper Load (0.5ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+Processing by ActivitiesController#index as */*
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:12:15.046281000 +0000", updated_at: "2021-09-12 03:12:15.046281000 +0000">
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (0.6ms)
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 2512)
+
+
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+No serializer found for resource: #<Activity id: 1, name: "Archery", difficulty: 2, created_at: "2021-09-12 03:12:15.069950000 +0000", updated_at: "2021-09-12 03:12:15.069950000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Activity::ActiveRecord_Relation (0.43ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 2831)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.8ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Caitlin"], ["age", 8], ["created_at", "2021-09-12 03:33:39.483068"], ["updated_at", "2021-09-12 03:33:39.483068"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lizzie"], ["age", 9], ["created_at", "2021-09-12 03:33:39.486351"], ["updated_at", "2021-09-12 03:33:39.486351"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tom"], ["age", 12], ["created_at", "2021-09-12 03:33:39.488061"], ["updated_at", "2021-09-12 03:33:39.488061"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Morgan"], ["age", 15], ["created_at", "2021-09-12 03:33:39.489682"], ["updated_at", "2021-09-12 03:33:39.489682"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Danny"], ["age", 11], ["created_at", "2021-09-12 03:33:39.491301"], ["updated_at", "2021-09-12 03:33:39.491301"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (1.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Peter"], ["age", 10], ["created_at", "2021-09-12 03:33:39.492866"], ["updated_at", "2021-09-12 03:33:39.492866"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Amanda"], ["age", 9], ["created_at", "2021-09-12 03:33:39.495450"], ["updated_at", "2021-09-12 03:33:39.495450"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nick"], ["age", 12], ["created_at", "2021-09-12 03:33:39.497345"], ["updated_at", "2021-09-12 03:33:39.497345"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Archery"], ["difficulty", 2], ["created_at", "2021-09-12 03:33:39.503371"], ["updated_at", "2021-09-12 03:33:39.503371"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Swimming"], ["difficulty", 3], ["created_at", "2021-09-12 03:33:39.505364"], ["updated_at", "2021-09-12 03:33:39.505364"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Photography"], ["difficulty", 2], ["created_at", "2021-09-12 03:33:39.510717"], ["updated_at", "2021-09-12 03:33:39.510717"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arts & Crafts"], ["difficulty", 5], ["created_at", "2021-09-12 03:33:39.512629"], ["updated_at", "2021-09-12 03:33:39.512629"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kayaking"], ["difficulty", 3], ["created_at", "2021-09-12 03:33:39.514512"], ["updated_at", "2021-09-12 03:33:39.514512"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Fencing"], ["difficulty", 4], ["created_at", "2021-09-12 03:33:39.516544"], ["updated_at", "2021-09-12 03:33:39.516544"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Canoeing"], ["difficulty", 3], ["created_at", "2021-09-12 03:33:39.518207"], ["updated_at", "2021-09-12 03:33:39.518207"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Windsurfing"], ["difficulty", 5], ["created_at", "2021-09-12 03:33:39.519787"], ["updated_at", "2021-09-12 03:33:39.519787"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 9], ["activity_id", 10], ["time", 11], ["created_at", "2021-09-12 03:33:39.534174"], ["updated_at", "2021-09-12 03:33:39.534174"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 9], ["activity_id", 9], ["time", 12], ["created_at", "2021-09-12 03:33:39.537801"], ["updated_at", "2021-09-12 03:33:39.537801"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 9], ["activity_id", 12], ["time", 15], ["created_at", "2021-09-12 03:33:39.542039"], ["updated_at", "2021-09-12 03:33:39.542039"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 10], ["activity_id", 10], ["time", 11], ["created_at", "2021-09-12 03:33:39.545547"], ["updated_at", "2021-09-12 03:33:39.545547"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 10], ["activity_id", 9], ["time", 12], ["created_at", "2021-09-12 03:33:39.549673"], ["updated_at", "2021-09-12 03:33:39.549673"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 12], ["activity_id", 16], ["time", 16], ["created_at", "2021-09-12 03:33:39.553468"], ["updated_at", "2021-09-12 03:33:39.553468"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.1ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 13], ["activity_id", 15], ["time", 11], ["created_at", "2021-09-12 03:33:39.556821"], ["updated_at", "2021-09-12 03:33:39.556821"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.1ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 11], ["activity_id", 12], ["time", 12], ["created_at", "2021-09-12 03:33:39.560214"], ["updated_at", "2021-09-12 03:33:39.560214"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:33:43 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:33:43 -0400
+Processing by ActivitiesController#index as */*
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+Processing by CampersController#index as */*
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mCamper Load (0.5ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+No serializer found for resource: #<Activity id: 1, name: "Archery", difficulty: 2, created_at: "2021-09-12 03:12:15.069950000 +0000", updated_at: "2021-09-12 03:12:15.069950000 +0000">
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Activity::ActiveRecord_Relation (2.27ms)
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:12:15.046281000 +0000", updated_at: "2021-09-12 03:12:15.046281000 +0000">
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 3127)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (2.71ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.5ms | Allocations: 4036)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCampers (20210605122510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "campers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122510"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActivities (20210605122531)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "activities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "difficulty" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122531"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSignups (20210605122602)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "signups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "camper_id" integer NOT NULL, "activity_id" integer NOT NULL, "time" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f143361fe2"
+FOREIGN KEY ("camper_id")
+  REFERENCES "campers" ("id")
+, CONSTRAINT "fk_rails_bdc39d0617"
+FOREIGN KEY ("activity_id")
+  REFERENCES "activities" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_signups_on_camper_id" ON "signups" ("camper_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_signups_on_activity_id" ON "signups" ("activity_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210605122602"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-12 03:34:22.608877"], ["updated_at", "2021-09-12 03:34:22.608877"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Caitlin"], ["age", 8], ["created_at", "2021-09-12 03:34:22.637424"], ["updated_at", "2021-09-12 03:34:22.637424"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lizzie"], ["age", 9], ["created_at", "2021-09-12 03:34:22.639606"], ["updated_at", "2021-09-12 03:34:22.639606"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tom"], ["age", 12], ["created_at", "2021-09-12 03:34:22.641335"], ["updated_at", "2021-09-12 03:34:22.641335"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Morgan"], ["age", 15], ["created_at", "2021-09-12 03:34:22.643021"], ["updated_at", "2021-09-12 03:34:22.643021"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.1ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Danny"], ["age", 11], ["created_at", "2021-09-12 03:34:22.644707"], ["updated_at", "2021-09-12 03:34:22.644707"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Peter"], ["age", 10], ["created_at", "2021-09-12 03:34:22.646481"], ["updated_at", "2021-09-12 03:34:22.646481"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Amanda"], ["age", 9], ["created_at", "2021-09-12 03:34:22.648657"], ["updated_at", "2021-09-12 03:34:22.648657"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Create (0.2ms)[0m  [1m[32mINSERT INTO "campers" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nick"], ["age", 12], ["created_at", "2021-09-12 03:34:22.650806"], ["updated_at", "2021-09-12 03:34:22.650806"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Archery"], ["difficulty", 2], ["created_at", "2021-09-12 03:34:22.656439"], ["updated_at", "2021-09-12 03:34:22.656439"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Swimming"], ["difficulty", 3], ["created_at", "2021-09-12 03:34:22.658418"], ["updated_at", "2021-09-12 03:34:22.658418"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Photography"], ["difficulty", 2], ["created_at", "2021-09-12 03:34:22.660086"], ["updated_at", "2021-09-12 03:34:22.660086"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arts & Crafts"], ["difficulty", 5], ["created_at", "2021-09-12 03:34:22.661729"], ["updated_at", "2021-09-12 03:34:22.661729"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kayaking"], ["difficulty", 3], ["created_at", "2021-09-12 03:34:22.663370"], ["updated_at", "2021-09-12 03:34:22.663370"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Fencing"], ["difficulty", 4], ["created_at", "2021-09-12 03:34:22.665179"], ["updated_at", "2021-09-12 03:34:22.665179"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Canoeing"], ["difficulty", 3], ["created_at", "2021-09-12 03:34:22.667276"], ["updated_at", "2021-09-12 03:34:22.667276"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActivity Create (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "difficulty", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Windsurfing"], ["difficulty", 5], ["created_at", "2021-09-12 03:34:22.669177"], ["updated_at", "2021-09-12 03:34:22.669177"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.3ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 1], ["activity_id", 2], ["time", 11], ["created_at", "2021-09-12 03:34:22.682331"], ["updated_at", "2021-09-12 03:34:22.682331"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 1], ["activity_id", 1], ["time", 12], ["created_at", "2021-09-12 03:34:22.686199"], ["updated_at", "2021-09-12 03:34:22.686199"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 1], ["activity_id", 4], ["time", 15], ["created_at", "2021-09-12 03:34:22.689459"], ["updated_at", "2021-09-12 03:34:22.689459"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 2], ["activity_id", 2], ["time", 11], ["created_at", "2021-09-12 03:34:22.692492"], ["updated_at", "2021-09-12 03:34:22.692492"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 2], ["activity_id", 1], ["time", 12], ["created_at", "2021-09-12 03:34:22.695739"], ["updated_at", "2021-09-12 03:34:22.695739"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 4], ["activity_id", 8], ["time", 16], ["created_at", "2021-09-12 03:34:22.700783"], ["updated_at", "2021-09-12 03:34:22.700783"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.1ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 5], ["activity_id", 7], ["time", 11], ["created_at", "2021-09-12 03:34:22.704771"], ["updated_at", "2021-09-12 03:34:22.704771"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCamper Load (0.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSignup Create (0.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 3], ["activity_id", 4], ["time", 12], ["created_at", "2021-09-12 03:34:22.710420"], ["updated_at", "2021-09-12 03:34:22.710420"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:34:26 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:34:26 -0400
+Processing by ActivitiesController#index as */*
+Processing by CampersController#index as */*
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+No serializer found for resource: #<Activity id: 1, name: "Archery", difficulty: 2, created_at: "2021-09-12 03:34:22.656439000 +0000", updated_at: "2021-09-12 03:34:22.656439000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Activity::ActiveRecord_Relation (1.01ms)
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:34:22.637424000 +0000", updated_at: "2021-09-12 03:34:22.637424000 +0000">
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.7ms | Allocations: 10992)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (0.51ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.9ms | Allocations: 11983)
+
+
+Started GET "/campers/1" for 127.0.0.1 at 2021-09-11 23:34:34 -0400
+Processing by CampersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms | Allocations: 2139)
+
+
+  
+NameError (uninitialized constant CampersController::CamperWithActivitiesSerializer):
+  
+app/controllers/campers_controller.rb:11:in `show'
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:34:36 -0400
+Processing by CampersController#index as */*
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:34:36 -0400
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:34:22.637424000 +0000", updated_at: "2021-09-12 03:34:22.637424000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (2.15ms)
+Processing by ActivitiesController#index as */*
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 1810)
+
+
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+No serializer found for resource: #<Activity id: 1, name: "Archery", difficulty: 2, created_at: "2021-09-12 03:34:22.656439000 +0000", updated_at: "2021-09-12 03:34:22.656439000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Activity::ActiveRecord_Relation (2.01ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 1888)
+
+
+Started GET "/campers/4" for 127.0.0.1 at 2021-09-11 23:34:38 -0400
+Processing by CampersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms | Allocations: 2039)
+
+
+  
+NameError (uninitialized constant CampersController::CamperWithActivitiesSerializer):
+  
+app/controllers/campers_controller.rb:11:in `show'
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:34:40 -0400
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:34:40 -0400
+Processing by CampersController#index as */*
+Processing by ActivitiesController#index as */*
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+No serializer found for resource: #<Activity id: 1, name: "Archery", difficulty: 2, created_at: "2021-09-12 03:34:22.656439000 +0000", updated_at: "2021-09-12 03:34:22.656439000 +0000">
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:34:22.637424000 +0000", updated_at: "2021-09-12 03:34:22.637424000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Activity::ActiveRecord_Relation (1.79ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 3018)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (1.64ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 3637)
+
+
+Started GET "/campers/3" for 127.0.0.1 at 2021-09-11 23:34:42 -0400
+Processing by CampersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 2024)
+
+
+  
+NameError (uninitialized constant CampersController::CamperWithActivitiesSerializer):
+  
+app/controllers/campers_controller.rb:11:in `show'
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:34:44 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:34:44 -0400
+Processing by ActivitiesController#index as */*
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+Processing by CampersController#index as */*
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+No serializer found for resource: #<Activity id: 1, name: "Archery", difficulty: 2, created_at: "2021-09-12 03:34:22.656439000 +0000", updated_at: "2021-09-12 03:34:22.656439000 +0000">
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Activity::ActiveRecord_Relation (2.17ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 2438)
+
+
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:34:22.637424000 +0000", updated_at: "2021-09-12 03:34:22.637424000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (1.65ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 3153)
+
+
+Started GET "/campers/7" for 127.0.0.1 at 2021-09-11 23:34:50 -0400
+Processing by CampersController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 2024)
+
+
+  
+NameError (uninitialized constant CampersController::CamperWithActivitiesSerializer):
+  
+app/controllers/campers_controller.rb:11:in `show'
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:34:52 -0400
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:34:52 -0400
+Processing by ActivitiesController#index as */*
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+Processing by CampersController#index as */*
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+No serializer found for resource: #<Activity id: 1, name: "Archery", difficulty: 2, created_at: "2021-09-12 03:34:22.656439000 +0000", updated_at: "2021-09-12 03:34:22.656439000 +0000">
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Activity::ActiveRecord_Relation (2.21ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 2625)
+
+
+No serializer found for resource: #<Camper id: 1, name: "Caitlin", age: 8, created_at: "2021-09-12 03:34:22.637424000 +0000", updated_at: "2021-09-12 03:34:22.637424000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Camper::ActiveRecord_Relation (1.7ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 2834)
+
+
+Started GET "/campers/4" for 127.0.0.1 at 2021-09-11 23:35:34 -0400
+Processing by CampersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 2024)
+
+
+  
+NameError (uninitialized constant CampersController::CamperWithActivitiesSerializer):
+  
+app/controllers/campers_controller.rb:11:in `show'
+Started GET "/campers/4" for ::1 at 2021-09-11 23:44:59 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+  [1m[36mCamper Load (0.6ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms | Allocations: 2478)
+
+
+  
+NameError (uninitialized constant CampersController::CamperWithActivitiesSerializer):
+  
+app/controllers/campers_controller.rb:11:in `show'
+Started GET "/campers/4" for ::1 at 2021-09-11 23:52:23 -0400
+Processing by CampersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+[active_model_serializers]   [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" INNER JOIN "signups" ON "activities"."id" = "signups"."activity_id" WHERE "signups"."camper_id" = ?[0m  [["camper_id", 4]]
+[active_model_serializers]   ↳ app/controllers/campers_controller.rb:11:in `show'
+[active_model_serializers] Rendered CamperWithActivitiesSerializer with ActiveModelSerializers::Adapter::Attributes (16.19ms)
+Completed 200 OK in 37ms (Views: 16.1ms | ActiveRecord: 1.5ms | Allocations: 13176)
+
+
+Started GET "/campers/3" for 127.0.0.1 at 2021-09-11 23:52:29 -0400
+Processing by CampersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+[active_model_serializers]   [1m[36mActivity Load (1.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" INNER JOIN "signups" ON "activities"."id" = "signups"."activity_id" WHERE "signups"."camper_id" = ?[0m  [["camper_id", 3]]
+[active_model_serializers]   ↳ app/controllers/campers_controller.rb:11:in `show'
+[active_model_serializers] Rendered CamperWithActivitiesSerializer with ActiveModelSerializers::Adapter::Attributes (5.6ms)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.3ms | Allocations: 1795)
+
+
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:52:30 -0400
+Processing by ActivitiesController#index as */*
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.81ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 1561)
+
+
+Started POST "/signups" for 127.0.0.1 at 2021-09-11 23:52:53 -0400
+Processing by SignupsController#create as */*
+  Parameters: {"activity_id"=>1, "camper_id"=>3, "time"=>0, "signup"=>{"camper_id"=>3, "activity_id"=>1, "time"=>0}}
+[31mUnpermitted parameter: :signup[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mCamper Load (0.2ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mSignup Create (1.0ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 3], ["activity_id", 1], ["time", 0], ["created_at", "2021-09-12 03:52:53.262973"], ["updated_at", "2021-09-12 03:52:53.262973"]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 35ms (Views: 0.8ms | ActiveRecord: 3.0ms | Allocations: 6222)
+
+
+Started POST "/signups" for 127.0.0.1 at 2021-09-11 23:53:07 -0400
+Processing by SignupsController#create as */*
+  Parameters: {"activity_id"=>2, "camper_id"=>3, "time"=>2, "signup"=>{"camper_id"=>3, "activity_id"=>2, "time"=>2}}
+[31mUnpermitted parameter: :signup[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mSignup Create (1.3ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 3], ["activity_id", 2], ["time", 2], ["created_at", "2021-09-12 03:53:07.036608"], ["updated_at", "2021-09-12 03:53:07.036608"]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 18ms (Views: 1.1ms | ActiveRecord: 3.3ms | Allocations: 3430)
+
+
+Started POST "/signups" for 127.0.0.1 at 2021-09-11 23:53:24 -0400
+Processing by SignupsController#create as */*
+  Parameters: {"activity_id"=>3, "camper_id"=>3, "time"=>0, "signup"=>{"camper_id"=>3, "activity_id"=>3, "time"=>0}}
+[31mUnpermitted parameter: :signup[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mSignup Create (1.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 3], ["activity_id", 3], ["time", 0], ["created_at", "2021-09-12 03:53:24.971581"], ["updated_at", "2021-09-12 03:53:24.971581"]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 17ms (Views: 1.1ms | ActiveRecord: 3.2ms | Allocations: 3430)
+
+
+Started POST "/signups" for 127.0.0.1 at 2021-09-11 23:53:39 -0400
+Processing by SignupsController#create as */*
+  Parameters: {"activity_id"=>4, "camper_id"=>3, "time"=>20, "signup"=>{"camper_id"=>3, "activity_id"=>4, "time"=>20}}
+[31mUnpermitted parameter: :signup[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mSignup Create (1.2ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 3], ["activity_id", 4], ["time", 20], ["created_at", "2021-09-12 03:53:39.908385"], ["updated_at", "2021-09-12 03:53:39.908385"]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 201 Created in 17ms (Views: 1.6ms | ActiveRecord: 3.0ms | Allocations: 3435)
+
+
+Started POST "/signups" for 127.0.0.1 at 2021-09-11 23:53:56 -0400
+Processing by SignupsController#create as */*
+  Parameters: {"activity_id"=>5, "camper_id"=>3, "time"=>20, "signup"=>{"camper_id"=>3, "activity_id"=>5, "time"=>20}}
+[31mUnpermitted parameter: :signup[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mCamper Load (1.0ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mSignup Create (1.3ms)[0m  [1m[32mINSERT INTO "signups" ("camper_id", "activity_id", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["camper_id", 3], ["activity_id", 5], ["time", 20], ["created_at", "2021-09-12 03:53:56.056105"], ["updated_at", "2021-09-12 03:53:56.056105"]]
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/signups_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 19ms (Views: 1.4ms | ActiveRecord: 3.8ms | Allocations: 3429)
+
+
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:53:59 -0400
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:53:59 -0400
+Processing by CampersController#index as */*
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+Processing by ActivitiesController#index as */*
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 3161)
+
+
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.7ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 1.1ms | Allocations: 3847)
+
+
+Started GET "/campers/3" for 127.0.0.1 at 2021-09-11 23:54:01 -0400
+Processing by CampersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mCamper Load (0.4ms)[0m  [1m[34mSELECT "campers".* FROM "campers" WHERE "campers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/campers_controller.rb:26:in `find_camper'
+[active_model_serializers]   [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities" INNER JOIN "signups" ON "activities"."id" = "signups"."activity_id" WHERE "signups"."camper_id" = ?[0m  [["camper_id", 3]]
+[active_model_serializers]   ↳ app/controllers/campers_controller.rb:11:in `show'
+[active_model_serializers] Rendered CamperWithActivitiesSerializer with ActiveModelSerializers::Adapter::Attributes (6.75ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 1.0ms | Allocations: 2326)
+
+
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:54:01 -0400
+Processing by ActivitiesController#index as */*
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.58ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 1517)
+
+
+Started GET "/activities" for 127.0.0.1 at 2021-09-11 23:54:02 -0400
+Processing by ActivitiesController#index as */*
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1630)
+
+
+Started GET "/campers" for 127.0.0.1 at 2021-09-11 23:54:02 -0400
+Processing by CampersController#index as */*
+  [1m[36mCamper Load (0.3ms)[0m  [1m[34mSELECT "campers".* FROM "campers"[0m
+  ↳ app/controllers/campers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1518)
+
+
