@@ -10,32 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_05_122602) do
+ActiveRecord::Schema.define(version: 2021_09_12_000003) do
 
-  create_table "activities", force: :cascade do |t|
+  create_table "employees", force: :cascade do |t|
     t.string "name"
-    t.integer "difficulty"
+    t.integer "public_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "campers", force: :cascade do |t|
+  create_table "tasks", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
+    t.integer "public_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "signups", force: :cascade do |t|
-    t.integer "camper_id", null: false
-    t.integer "activity_id", null: false
-    t.integer "time"
+  create_table "trainings", force: :cascade do |t|
+    t.integer "employee_id", null: false
+    t.integer "task_id", null: false
+    t.integer "trainer"
+    t.integer "initial_production_rate"
+    t.integer "initial_error_rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["activity_id"], name: "index_signups_on_activity_id"
-    t.index ["camper_id"], name: "index_signups_on_camper_id"
+    t.index ["employee_id"], name: "index_trainings_on_employee_id"
+    t.index ["task_id"], name: "index_trainings_on_task_id"
   end
 
-  add_foreign_key "signups", "activities"
-  add_foreign_key "signups", "campers"
+  add_foreign_key "trainings", "employees"
+  add_foreign_key "trainings", "tasks"
 end
