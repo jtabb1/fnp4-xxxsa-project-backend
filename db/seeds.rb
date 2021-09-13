@@ -1,31 +1,29 @@
-puts "🏕 Seeding campers..."
-camper1 = Camper.create(name: 'Caitlin', age: 8)
-camper2 = Camper.create(name: 'Lizzie', age: 9)
-camper3 = Camper.create(name: 'Tom', age: 12)
-camper4 = Camper.create(name: 'Morgan', age: 15)
-camper5 = Camper.create(name: 'Danny', age: 11)
-camper6 = Camper.create(name: 'Peter', age: 10)
-camper7 = Camper.create(name: 'Amanda', age: 9)
-camper8 = Camper.create(name: 'Nick', age: 12)
+puts "🌱 Seeding employees..."
+ee01 = Employee.create(name: 'a', public_id: 1001)
+ee02 = Employee.create(name: 'b', public_id: 1002)
+ee03 = Employee.create(name: 'c', public_id: 1003)
+ee04 = Employee.create(name: 'd', public_id: 1004)
+ee05 = Employee.create(name: 'e', public_id: 1005)
+ee06 = Employee.create(name: 'f', public_id: 1006)
+ee07 = Employee.create(name: 'g', public_id: 1007)
+ee08 = Employee.create(name: 'h', public_id: 1008)
+ee09 = Employee.create(name: 'i', public_id: 1009)
+ee10 = Employee.create(name: 'j', public_id: 1010)
+ 
+puts "🌱 Seeding tasks..."
+ta01 = Task.create(name: 'ta01', public_id: 1001001)
+ta02 = Task.create(name: 'ta02', public_id: 1002001)
+ta03 = Task.create(name: 'ta03', public_id: 1003001)
 
-puts "🏕 Seeding activities..."
-activity1 = Activity.create(name: 'Archery', difficulty: 2)
-activity2 = Activity.create(name: 'Swimming', difficulty: 3)
-activity3 = Activity.create(name: 'Photography', difficulty: 2)
-activity4 = Activity.create(name: 'Arts & Crafts', difficulty: 5)
-activity5 = Activity.create(name: 'Kayaking', difficulty: 3)
-activity6 = Activity.create(name: 'Fencing', difficulty: 4)
-activity7 = Activity.create(name: 'Canoeing', difficulty: 3)
-activity8 = Activity.create(name: 'Windsurfing', difficulty: 5)
-
-puts "🏕 Seeding signups..."
-Signup.create(camper_id: camper1.id, activity_id: activity2.id, time: 11)
-Signup.create(camper_id: camper1.id, activity_id: activity1.id, time: 12)
-Signup.create(camper_id: camper1.id, activity_id: activity4.id, time: 15)
-Signup.create(camper_id: camper2.id, activity_id: activity2.id, time: 11)
-Signup.create(camper_id: camper2.id, activity_id: activity1.id, time: 12)
-Signup.create(camper_id: camper4.id, activity_id: activity8.id, time: 16)
-Signup.create(camper_id: camper5.id, activity_id: activity7.id, time: 11)
-Signup.create(camper_id: camper3.id, activity_id: activity4.id, time: 12)
+puts "🌱 Seeding trainings..."
+Training.create(employee_id: ee01.id, task_id: ta01.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
+Training.create(employee_id: ee02.id, task_id: ta01.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
+Training.create(employee_id: ee03.id, task_id: ta01.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
+Training.create(employee_id: ee04.id, task_id: ta02.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
+Training.create(employee_id: ee05.id, task_id: ta02.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
+Training.create(employee_id: ee06.id, task_id: ta02.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
+Training.create(employee_id: ee07.id, task_id: ta03.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
+Training.create(employee_id: ee08.id, task_id: ta03.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
+Training.create(employee_id: ee09.id, task_id: ta03.id, trainer: ee10.id, initial_production_rate: 123, initial_error_rate: 11234)
 
 puts "✅ Done seeding!"
