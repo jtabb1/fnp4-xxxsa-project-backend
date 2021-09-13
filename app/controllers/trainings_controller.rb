@@ -1,14 +1,14 @@
-class Completed_trainingsController < ApplicationController
+class TrainingsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
   def create
-    completed_training = Completed_training.create!(completed_training_params)
-    render json: completed_training.task, status: :created
+    training = Training.create!(training_params)
+    render json: training.task, status: :created
   end
 
   private
 
-  def completed_training_params
+  def training_params
     params.permit(:employee_id, :task_id)
   end
 
