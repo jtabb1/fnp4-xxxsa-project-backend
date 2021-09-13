@@ -1,15 +1,15 @@
-class SignupsController < ApplicationController
+class Completed_trainingsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
   def create
-    signup = Signup.create!(signup_params)
-    render json: signup.activity, status: :created
+    completed_training = Completed_training.create!(completed_training_params)
+    render json: completed_training.task, status: :created
   end
 
   private
 
-  def signup_params
-    params.permit(:camper_id, :activity_id, :time)
+  def completed_training_params
+    params.permit(:employee_id, :task_id)
   end
 
   def render_unprocessable_entity_response(exception)

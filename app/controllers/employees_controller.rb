@@ -1,33 +1,33 @@
-class CampersController < ApplicationController
+class EmployeesController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
   def index
-    render json: Camper.all
+    render json: Employee.all
   end
 
   def show
-    camper = find_camper
-    render json: camper, serializer: CamperWithActivitiesSerializer
+    employee = find_employee
+    render json: employee, serializer: EmployeeWithTasksSerializer
   end
 
   def create
-    camper = Camper.create!(camper_params)
-    render json: camper, status: :created
+    employee = Employee.create!(employee_params)
+    render json: employee, status: :created
   end
 
   private
 
-  def camper_params
-    params.permit(:name, :age)
+  def employee_params
+    params.permit(:name)
   end
   
-  def find_camper
-    Camper.find(params[:id])
+  def find_employee
+    Employee.find(params[:id])
   end
 
   def render_not_found_response
-    render json: { error: "Camper not found" }, status: :not_found
+    render json: { error: "Employee not found" }, status: :not_found
   end
 
   def render_unprocessable_entity_response(exception)
