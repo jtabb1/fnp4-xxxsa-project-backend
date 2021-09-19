@@ -1,6 +1,10 @@
 class TrainingsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
+  def index
+    render json: Training.group("task_id").group("error_rate_in_english").order("task_id").order("error_rate_in_english").order("initial_production_rate DESC")
+  end
+  
   def create
     training = Training.create!(training_params)
     render json: training.task, status: :created
