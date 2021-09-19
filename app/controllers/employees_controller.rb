@@ -11,6 +11,12 @@ class EmployeesController < ApplicationController
     render json: employee, serializer: EmployeeWithTasksSerializer
   end
 
+  def destroy
+    employee = find_employee
+    employee.destroy
+    head :no_content
+  end
+
   def create
     employee = Employee.create!(employee_params)
     render json: employee, status: :created

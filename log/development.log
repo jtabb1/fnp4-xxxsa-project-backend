@@ -4243,3 +4243,689 @@ Processing by EmployeesController#show as */*
 Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 1.4ms | Allocations: 1789)
 
 
+Started GET "/employees" for 127.0.0.1 at 2021-09-16 20:39:27 -0400
+Processing by EmployeesController#index as */*
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.4ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 7.2ms | Allocations: 2307)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2021-09-16 20:39:29 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (2.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 3]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (8.75ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 3.1ms | Allocations: 1819)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-16 20:39:30 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.36ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 1700)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2021-09-16 20:39:31 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 1]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (5.08ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 1986)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-16 20:39:33 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.69ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1700)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2021-09-16 20:39:35 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 2]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (5.86ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 1789)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-17 00:41:53 -0400
+Processing by EmployeesController#index as */*
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.64ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 3.9ms | Allocations: 2306)
+
+
+Started GET "/employees/4" for 127.0.0.1 at 2021-09-17 00:41:55 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (3.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 4]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (9.49ms)
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 3.6ms | Allocations: 1819)
+
+
+Started GET "/employees/4" for 127.0.0.1 at 2021-09-17 00:42:01 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 4]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1789)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 00:42:01 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1028)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-17 00:42:08 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.75ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 1700)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2021-09-17 00:42:10 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 3]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (4.5ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 1789)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 00:42:10 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.36ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 1013)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-17 00:42:16 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>2, "employee_id"=>3, "training"=>{"employee_id"=>3, "task_id"=>2}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (1.4ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 3], ["task_id", 2], ["created_at", "2021-09-17 04:42:16.320319"], ["updated_at", "2021-09-17 04:42:16.320319"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 201 Created in 54ms (Views: 0.6ms | ActiveRecord: 5.1ms | Allocations: 7616)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 00:54:26 -0400
+Processing by TasksController#index as */*
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 1620)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-17 00:54:33 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.11ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 1715)
+
+
+Started GET "/employees/5" for 127.0.0.1 at 2021-09-17 00:54:34 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 5]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (5.69ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 1.1ms | Allocations: 1819)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 00:54:34 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1013)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-17 00:54:42 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>1, "employee_id"=>5, "training"=>{"employee_id"=>5, "task_id"=>1}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (1.0ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 5], ["task_id", 1], ["created_at", "2021-09-17 04:54:42.358470"], ["updated_at", "2021-09-17 04:54:42.358470"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 25ms (Views: 1.1ms | ActiveRecord: 3.3ms | Allocations: 3429)
+
+
+Started GET "/employees/5" for 127.0.0.1 at 2021-09-17 00:55:42 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 5]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (1.93ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 1887)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 00:55:42 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1013)
+
+
+Started GET "/employees/5" for 127.0.0.1 at 2021-09-17 00:55:44 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 5]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (2.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1887)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 00:55:44 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1013)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-17 00:56:03 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>3, "employee_id"=>5, "training"=>{"employee_id"=>5, "task_id"=>3}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (1.3ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 5], ["task_id", 3], ["created_at", "2021-09-17 04:56:03.856651"], ["updated_at", "2021-09-17 04:56:03.856651"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 17ms (Views: 1.5ms | ActiveRecord: 3.1ms | Allocations: 3413)
+
+
+Started GET "/employees/5" for 127.0.0.1 at 2021-09-17 00:59:10 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 5]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (2.15ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.9ms | Allocations: 1985)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-17 00:59:14 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.48ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 1700)
+
+
+Started GET "/employees/6" for 127.0.0.1 at 2021-09-17 00:59:16 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 6]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (4.93ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 1789)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 00:59:16 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.02ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 1013)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-17 00:59:20 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>1, "employee_id"=>6, "training"=>{"employee_id"=>6, "task_id"=>1}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (1.1ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 6], ["task_id", 1], ["created_at", "2021-09-17 04:59:20.448298"], ["updated_at", "2021-09-17 04:59:20.448298"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 20ms (Views: 1.4ms | ActiveRecord: 3.0ms | Allocations: 3416)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-17 00:59:27 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>3, "employee_id"=>6, "training"=>{"employee_id"=>6, "task_id"=>3}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (1.1ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 6], ["task_id", 3], ["created_at", "2021-09-17 04:59:27.216844"], ["updated_at", "2021-09-17 04:59:27.216844"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 19ms (Views: 0.9ms | ActiveRecord: 3.4ms | Allocations: 3417)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-17 01:00:25 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.92ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.9ms | Allocations: 1701)
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2021-09-17 01:00:27 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 7]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (4.53ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 1789)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 01:00:27 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1013)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-17 01:00:33 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>1, "employee_id"=>7, "training"=>{"employee_id"=>7, "task_id"=>1}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (1.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 7], ["task_id", 1], ["created_at", "2021-09-17 05:00:33.683318"], ["updated_at", "2021-09-17 05:00:33.683318"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 17ms (Views: 1.4ms | ActiveRecord: 3.1ms | Allocations: 3414)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-17 01:00:37 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>3, "employee_id"=>7, "training"=>{"employee_id"=>7, "task_id"=>3}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (1.0ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 7], ["task_id", 3], ["created_at", "2021-09-17 05:00:37.024766"], ["updated_at", "2021-09-17 05:00:37.024766"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 19ms (Views: 1.2ms | ActiveRecord: 3.2ms | Allocations: 3413)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-17 01:02:35 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.25ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 1.1ms | Allocations: 1701)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2021-09-17 01:05:48 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 8]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (5.69ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 1789)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-17 01:05:48 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1013)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 22:37:55 -0400
+Processing by EmployeesController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.92ms)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 5.2ms | Allocations: 5871)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 22:37:58 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1700)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 22:38:01 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 4211)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2021-09-18 22:38:10 -0400
+Processing by TasksController#create as */*
+  Parameters: {"name"=>"grapes", "public_id"=>2, "task"=>{"name"=>"grapes", "public_id"=>2}}
+[31mUnpermitted parameter: :task[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:16:in `create'
+  [1m[36mTask Create (3.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "grapes"], ["public_id", 2], ["created_at", "2021-09-19 02:38:10.493226"], ["updated_at", "2021-09-19 02:38:10.493226"]]
+  ↳ app/controllers/tasks_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:16:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 18ms (Views: 1.1ms | ActiveRecord: 5.8ms | Allocations: 2034)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 22:38:19 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.86ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.8ms | Allocations: 1700)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2021-09-18 22:38:21 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 3]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (8.18ms)
+Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 2.6ms | Allocations: 3263)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 22:38:21 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1112)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-18 22:38:25 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>4, "employee_id"=>3, "training"=>{"employee_id"=>3, "task_id"=>4}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (0.6ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 3], ["task_id", 4], ["created_at", "2021-09-19 02:38:25.062857"], ["updated_at", "2021-09-19 02:38:25.062857"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 34ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 6649)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 23:20:14 -0400
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 23:20:14 -0400
+Processing by TasksController#index as */*
+Processing by EmployeesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.58ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.5ms | Allocations: 3773)
+
+
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 1.3ms | Allocations: 4062)
+
+
+Started DELETE "/tasks/1" for 127.0.0.1 at 2021-09-18 23:20:20 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks/1"):
+  
+Started DELETE "/tasks/1" for 127.0.0.1 at 2021-09-18 23:20:21 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks/1"):
+  
+Started DELETE "/tasks/2" for 127.0.0.1 at 2021-09-18 23:20:22 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks/2"):
+  
+Started DELETE "/tasks/3" for 127.0.0.1 at 2021-09-18 23:20:22 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks/3"):
+  
+Started DELETE "/tasks/4" for 127.0.0.1 at 2021-09-18 23:20:23 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks/4"):
+  
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 23:37:33 -0400
+Processing by EmployeesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.65ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.4ms | Allocations: 2305)
+
+
+Started GET "/employees/4" for 127.0.0.1 at 2021-09-18 23:37:35 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 4]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (4.22ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 1819)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 23:37:35 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.27ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 1127)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 23:38:16 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.78ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 1112)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 23:39:37 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 1700)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2021-09-18 23:39:38 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 1]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (6.5ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 1985)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 23:39:38 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.44ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 1112)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 23:39:46 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 1113)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 23:39:48 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.08ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 1701)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 23:39:51 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 1700)
+
+
+Started GET "/employees/4" for 127.0.0.1 at 2021-09-18 23:39:54 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 4]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (4.92ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.9ms | Allocations: 1789)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 23:39:54 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1112)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-18 23:39:57 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.47ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 1700)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2021-09-18 23:39:59 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:26:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 8]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (4.9ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 1789)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 23:39:59 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.26ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1112)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-18 23:40:01 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.37ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 1112)
+
+
