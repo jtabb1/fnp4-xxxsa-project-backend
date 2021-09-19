@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_09_12_000003) do
     t.integer "trainer"
     t.integer "initial_production_rate"
     t.integer "initial_error_rate"
+    t.string "error_rate_in_english"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["employee_id"], name: "index_trainings_on_employee_id"

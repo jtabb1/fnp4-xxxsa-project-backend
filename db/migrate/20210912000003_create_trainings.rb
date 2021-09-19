@@ -7,6 +7,7 @@ class CreateTrainings < ActiveRecord::Migration[6.1]
       # t.integer :completion_date
       t.integer :initial_production_rate
       t.integer :initial_error_rate
+      t.string :error_rate_in_english
 
       t.timestamps
     end

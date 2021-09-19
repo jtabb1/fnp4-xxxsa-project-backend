@@ -5096,3 +5096,651 @@ Processing by TasksController#index as */*
 Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1112)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:53:15 -0400
+Processing by TasksController#index as */*
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.79ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 4.7ms | Allocations: 1719)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:53:17 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.95ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1112)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:53:30 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1112)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:53:34 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1112)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:53:45 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1112)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 14:53:53 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.01ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.8ms | Allocations: 1715)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2021-09-19 14:53:56 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:32:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 8]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (7.31ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 1.3ms | Allocations: 1917)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:53:56 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1112)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-19 14:53:59 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>4, "employee_id"=>8, "training"=>{"employee_id"=>8, "task_id"=>4}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (4.5ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 8], ["task_id", 4], ["created_at", "2021-09-19 18:53:59.865628"], ["updated_at", "2021-09-19 18:53:59.865628"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 26ms (Views: 1.5ms | ActiveRecord: 6.8ms | Allocations: 3431)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 14:54:01 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.5ms | Allocations: 1700)
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2021-09-19 14:54:04 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:32:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 7]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (6.72ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.2ms | Allocations: 1987)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:54:04 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 1112)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2021-09-19 14:54:07 -0400
+Processing by TrainingsController#create as */*
+  Parameters: {"task_id"=>4, "employee_id"=>7, "training"=>{"employee_id"=>7, "task_id"=>4}}
+[31mUnpermitted parameter: :training[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTraining Create (2.1ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 7], ["task_id", 4], ["created_at", "2021-09-19 18:54:07.959635"], ["updated_at", "2021-09-19 18:54:07.959635"]]
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:5:in `create'
+[active_model_serializers] Rendered TaskSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 23ms (Views: 1.5ms | ActiveRecord: 4.7ms | Allocations: 3417)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:54:10 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 1113)
+
+
+Started DELETE "/tasks/4" for 127.0.0.1 at 2021-09-19 14:54:18 -0400
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:32:in `find_task'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:16:in `destroy'
+  [1m[36mTraining Load (0.5ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings" WHERE "trainings"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:16:in `destroy'
+  [1m[36mTraining Destroy (4.2ms)[0m  [1m[31mDELETE FROM "trainings" WHERE "trainings"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/tasks_controller.rb:16:in `destroy'
+  [1m[36mTraining Destroy (5.5ms)[0m  [1m[31mDELETE FROM "trainings" WHERE "trainings"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/tasks_controller.rb:16:in `destroy'
+  [1m[36mTraining Destroy (0.1ms)[0m  [1m[31mDELETE FROM "trainings" WHERE "trainings"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/tasks_controller.rb:16:in `destroy'
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/tasks_controller.rb:16:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:16:in `destroy'
+Completed 204 No Content in 29ms (ActiveRecord: 11.7ms | Allocations: 4710)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 14:54:23 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.34ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.7ms | Allocations: 1700)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2021-09-19 14:54:25 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:32:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 8]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (7.55ms)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 2.0ms | Allocations: 1887)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:54:25 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.82ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1013)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 14:54:27 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.02ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 1700)
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2021-09-19 14:54:29 -0400
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:32:in `find_employee'
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "trainings" ON "tasks"."id" = "trainings"."task_id" WHERE "trainings"."employee_id" = ?[0m  [["employee_id", 7]]
+[active_model_serializers]   ↳ app/controllers/employees_controller.rb:11:in `show'
+[active_model_serializers] Rendered EmployeeWithTasksSerializer with ActiveModelSerializers::Adapter::Attributes (5.85ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.8ms | Allocations: 1985)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 14:54:29 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.77ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1013)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 15:27:23 -0400
+Processing by EmployeesController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.26ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 1.9ms | Allocations: 2307)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 15:27:27 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.08ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 1028)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 15:27:30 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.58ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 1700)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 15:27:32 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.95ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 1013)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 15:27:34 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.52ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 1700)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEmployees (20210912000001)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "employees" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210912000001"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTasks (20210912000002)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210912000002"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTrainings (20210912000003)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "trainings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer NOT NULL, "task_id" integer NOT NULL, "trainer" integer, "initial_production_rate" integer, "initial_error_rate" integer, "english_error_rate" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_531fef59b2"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+, CONSTRAINT "fk_rails_d6dfa39ab5"
+FOREIGN KEY ("task_id")
+  REFERENCES "tasks" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_trainings_on_employee_id" ON "trainings" ("employee_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_trainings_on_task_id" ON "trainings" ("task_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210912000003"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-19 21:12:17.647740"], ["updated_at", "2021-09-19 21:12:17.647740"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Stella Jaramillo"], ["public_id", 1001], ["created_at", "2021-09-19 21:12:17.672645"], ["updated_at", "2021-09-19 21:12:17.672645"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jago North"], ["public_id", 1002], ["created_at", "2021-09-19 21:12:17.674610"], ["updated_at", "2021-09-19 21:12:17.674610"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Selin Rigby"], ["public_id", 1003], ["created_at", "2021-09-19 21:12:17.676444"], ["updated_at", "2021-09-19 21:12:17.676444"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Opal Zamora"], ["public_id", 1004], ["created_at", "2021-09-19 21:12:17.678261"], ["updated_at", "2021-09-19 21:12:17.678261"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dillon Walker"], ["public_id", 1005], ["created_at", "2021-09-19 21:12:17.680091"], ["updated_at", "2021-09-19 21:12:17.680091"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mohsin Browne"], ["public_id", 1006], ["created_at", "2021-09-19 21:12:17.682206"], ["updated_at", "2021-09-19 21:12:17.682206"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Katelin Hodgson"], ["public_id", 1007], ["created_at", "2021-09-19 21:12:17.684132"], ["updated_at", "2021-09-19 21:12:17.684132"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Isobel Beaumont"], ["public_id", 1008], ["created_at", "2021-09-19 21:12:17.685702"], ["updated_at", "2021-09-19 21:12:17.685702"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Addison Kline"], ["public_id", 1009], ["created_at", "2021-09-19 21:12:17.687213"], ["updated_at", "2021-09-19 21:12:17.687213"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pheobe Hayden"], ["public_id", 1010], ["created_at", "2021-09-19 21:12:17.688691"], ["updated_at", "2021-09-19 21:12:17.688691"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Antigen Development"], ["public_id", 1001001], ["created_at", "2021-09-19 21:12:17.698290"], ["updated_at", "2021-09-19 21:12:17.698290"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Harvesting"], ["public_id", 1002001], ["created_at", "2021-09-19 21:12:17.700329"], ["updated_at", "2021-09-19 21:12:17.700329"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Purification"], ["public_id", 1003001], ["created_at", "2021-09-19 21:12:17.701911"], ["updated_at", "2021-09-19 21:12:17.701911"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 1], ["task_id", 1], ["trainer", 1], ["initial_production_rate", 543], ["initial_error_rate", 7200], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.717222"], ["updated_at", "2021-09-19 21:12:17.717222"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.7ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 1], ["task_id", 2], ["trainer", 1], ["initial_production_rate", 441], ["initial_error_rate", 8300], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.720510"], ["updated_at", "2021-09-19 21:12:17.720510"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 1], ["task_id", 3], ["trainer", 1], ["initial_production_rate", 642], ["initial_error_rate", 7500], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.723981"], ["updated_at", "2021-09-19 21:12:17.723981"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 2], ["task_id", 1], ["trainer", 1], ["initial_production_rate", 302], ["initial_error_rate", 8500], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.727333"], ["updated_at", "2021-09-19 21:12:17.727333"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.1ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 3], ["task_id", 1], ["trainer", 1], ["initial_production_rate", 330], ["initial_error_rate", 9800], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.730424"], ["updated_at", "2021-09-19 21:12:17.730424"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 4], ["task_id", 1], ["trainer", 1], ["initial_production_rate", 350], ["initial_error_rate", 10200], ["english_error_rate", "needs improvement"], ["created_at", "2021-09-19 21:12:17.733397"], ["updated_at", "2021-09-19 21:12:17.733397"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.1ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 5], ["task_id", 2], ["trainer", 1], ["initial_production_rate", 340], ["initial_error_rate", 11000], ["english_error_rate", "needs improvement"], ["created_at", "2021-09-19 21:12:17.737494"], ["updated_at", "2021-09-19 21:12:17.737494"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 6], ["task_id", 2], ["trainer", 1], ["initial_production_rate", 290], ["initial_error_rate", 9700], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.740833"], ["updated_at", "2021-09-19 21:12:17.740833"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 7], ["task_id", 2], ["trainer", 1], ["initial_production_rate", 340], ["initial_error_rate", 7700], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.744911"], ["updated_at", "2021-09-19 21:12:17.744911"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.1ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 8], ["task_id", 3], ["trainer", 1], ["initial_production_rate", 311], ["initial_error_rate", 8100], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.748506"], ["updated_at", "2021-09-19 21:12:17.748506"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 9], ["task_id", 3], ["trainer", 1], ["initial_production_rate", 305], ["initial_error_rate", 10600], ["english_error_rate", "needs improvement"], ["created_at", "2021-09-19 21:12:17.751775"], ["updated_at", "2021-09-19 21:12:17.751775"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.1ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "english_error_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 10], ["task_id", 3], ["trainer", 1], ["initial_production_rate", 320], ["initial_error_rate", 7800], ["english_error_rate", "good"], ["created_at", "2021-09-19 21:12:17.755134"], ["updated_at", "2021-09-19 21:12:17.755134"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 17:16:24 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (3.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.2ms)
+Completed 200 OK in 24ms (Views: 8.5ms | ActiveRecord: 3.3ms | Allocations: 5227)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 17:16:25 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 4235)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 17:16:27 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1013)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 17:16:32 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.88ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 1700)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 17:16:33 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.01ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 1700)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 17:16:34 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 1013)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 17:16:35 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.6ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 1700)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 17:16:37 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.08ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 1700)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 17:16:40 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1013)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 17:16:41 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.69ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 2.3ms | Allocations: 1700)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 17:16:42 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.63ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.3ms | Allocations: 1013)
+
+
+Started GET "/employees" for 127.0.0.1 at 2021-09-19 17:16:51 -0400
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.06ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 1.4ms | Allocations: 1700)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2021-09-19 17:16:52 -0400
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1013)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEmployees (20210912000001)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "employees" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210912000001"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTasks (20210912000002)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210912000002"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTrainings (20210912000003)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "trainings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer NOT NULL, "task_id" integer NOT NULL, "trainer" integer, "initial_production_rate" integer, "initial_error_rate" integer, "error_rate_in_english" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_531fef59b2"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+, CONSTRAINT "fk_rails_d6dfa39ab5"
+FOREIGN KEY ("task_id")
+  REFERENCES "tasks" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_trainings_on_employee_id" ON "trainings" ("employee_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_trainings_on_task_id" ON "trainings" ("task_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210912000003"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-19 21:20:20.198482"], ["updated_at", "2021-09-19 21:20:20.198482"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Stella Jaramillo"], ["public_id", 1001], ["created_at", "2021-09-19 21:20:20.224585"], ["updated_at", "2021-09-19 21:20:20.224585"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jago North"], ["public_id", 1002], ["created_at", "2021-09-19 21:20:20.226634"], ["updated_at", "2021-09-19 21:20:20.226634"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Selin Rigby"], ["public_id", 1003], ["created_at", "2021-09-19 21:20:20.228428"], ["updated_at", "2021-09-19 21:20:20.228428"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (2.0ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Opal Zamora"], ["public_id", 1004], ["created_at", "2021-09-19 21:20:20.231028"], ["updated_at", "2021-09-19 21:20:20.231028"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dillon Walker"], ["public_id", 1005], ["created_at", "2021-09-19 21:20:20.238793"], ["updated_at", "2021-09-19 21:20:20.238793"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mohsin Browne"], ["public_id", 1006], ["created_at", "2021-09-19 21:20:20.240678"], ["updated_at", "2021-09-19 21:20:20.240678"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Katelin Hodgson"], ["public_id", 1007], ["created_at", "2021-09-19 21:20:20.242649"], ["updated_at", "2021-09-19 21:20:20.242649"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (1.1ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Isobel Beaumont"], ["public_id", 1008], ["created_at", "2021-09-19 21:20:20.245419"], ["updated_at", "2021-09-19 21:20:20.245419"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Addison Kline"], ["public_id", 1009], ["created_at", "2021-09-19 21:20:20.253015"], ["updated_at", "2021-09-19 21:20:20.253015"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pheobe Hayden"], ["public_id", 1010], ["created_at", "2021-09-19 21:20:20.254999"], ["updated_at", "2021-09-19 21:20:20.254999"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Antigen Development"], ["public_id", 1001001], ["created_at", "2021-09-19 21:20:20.261152"], ["updated_at", "2021-09-19 21:20:20.261152"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Harvesting"], ["public_id", 1002001], ["created_at", "2021-09-19 21:20:20.263845"], ["updated_at", "2021-09-19 21:20:20.263845"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "public_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Purification"], ["public_id", 1003001], ["created_at", "2021-09-19 21:20:20.266287"], ["updated_at", "2021-09-19 21:20:20.266287"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.3ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 1], ["task_id", 1], ["trainer", 1], ["initial_production_rate", 543], ["initial_error_rate", 7200], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.281479"], ["updated_at", "2021-09-19 21:20:20.281479"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTraining Create (2.7ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 1], ["task_id", 2], ["trainer", 1], ["initial_production_rate", 441], ["initial_error_rate", 8300], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.286699"], ["updated_at", "2021-09-19 21:20:20.286699"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.3ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 1], ["task_id", 3], ["trainer", 1], ["initial_production_rate", 642], ["initial_error_rate", 7500], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.293624"], ["updated_at", "2021-09-19 21:20:20.293624"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTraining Create (5.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 2], ["task_id", 1], ["trainer", 1], ["initial_production_rate", 302], ["initial_error_rate", 8500], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.297981"], ["updated_at", "2021-09-19 21:20:20.297981"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.3ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 3], ["task_id", 1], ["trainer", 1], ["initial_production_rate", 330], ["initial_error_rate", 9800], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.314880"], ["updated_at", "2021-09-19 21:20:20.314880"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 4], ["task_id", 1], ["trainer", 1], ["initial_production_rate", 350], ["initial_error_rate", 10200], ["error_rate_in_english", "needs improvement"], ["created_at", "2021-09-19 21:20:20.319316"], ["updated_at", "2021-09-19 21:20:20.319316"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 5], ["task_id", 2], ["trainer", 1], ["initial_production_rate", 340], ["initial_error_rate", 11000], ["error_rate_in_english", "needs improvement"], ["created_at", "2021-09-19 21:20:20.323354"], ["updated_at", "2021-09-19 21:20:20.323354"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.3ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 6], ["task_id", 2], ["trainer", 1], ["initial_production_rate", 290], ["initial_error_rate", 9700], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.327339"], ["updated_at", "2021-09-19 21:20:20.327339"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 7], ["task_id", 2], ["trainer", 1], ["initial_production_rate", 340], ["initial_error_rate", 7700], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.331700"], ["updated_at", "2021-09-19 21:20:20.331700"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 8], ["task_id", 3], ["trainer", 1], ["initial_production_rate", 311], ["initial_error_rate", 8100], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.335695"], ["updated_at", "2021-09-19 21:20:20.335695"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 9], ["task_id", 3], ["trainer", 1], ["initial_production_rate", 305], ["initial_error_rate", 10600], ["error_rate_in_english", "needs improvement"], ["created_at", "2021-09-19 21:20:20.339173"], ["updated_at", "2021-09-19 21:20:20.339173"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTraining Create (0.2ms)[0m  [1m[32mINSERT INTO "trainings" ("employee_id", "task_id", "trainer", "initial_production_rate", "initial_error_rate", "error_rate_in_english", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["employee_id", 10], ["task_id", 3], ["trainer", 1], ["initial_production_rate", 320], ["initial_error_rate", 7800], ["error_rate_in_english", "good"], ["created_at", "2021-09-19 21:20:20.345083"], ["updated_at", "2021-09-19 21:20:20.345083"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
