@@ -11,6 +11,12 @@ class TasksController < ApplicationController
     render json: task
   end
 
+  def update
+    task = find_task
+    task.update(task_params)
+    render json: task
+  end
+
   def destroy
     task = find_task
     task.destroy

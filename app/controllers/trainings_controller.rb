@@ -2,7 +2,6 @@ class TrainingsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
   def index
-    # render json: Training.all
     render json: Training.order("task_id").order("error_rate_in_english").order("initial_production_rate DESC")
   end
   

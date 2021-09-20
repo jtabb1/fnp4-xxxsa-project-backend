@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
   def index
-    render json: Employee.all
+    render json: Employee.order("name")
   end
 
   def show
