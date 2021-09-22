@@ -11,9 +11,9 @@ ee09 = Employee.create!(name: 'Addison Kline', public_id: 1009)
 ee10 = Employee.create!(name: 'Pheobe Hayden', public_id: 1010)
  
 puts "🌱 Seeding tasks..."
-ta01 = Task.create!(name: 'Antigen Development', public_id: 1001001)
-ta02 = Task.create!(name: 'Harvesting', public_id: 1002001)
-ta03 = Task.create!(name: 'Purification', public_id: 1003001)
+ta01 = Task.create!(task_name: 'Antigen Development', public_id: 1001001)
+ta02 = Task.create!(task_name: 'Harvesting', public_id: 1002001)
+ta03 = Task.create!(task_name: 'Purification', public_id: 1003001)
 
 puts "🌱 Seeding trainings..."
 Training.create!(employee_id: ee01.id, task_id: ta01.id, trainer: ee01.id, initial_production_rate: 543, error_rate_in_english: 'good', initial_error_rate: 7200)

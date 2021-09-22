@@ -2,5 +2,5 @@ class Task < ApplicationRecord
   has_many :trainings, dependent: :destroy
   has_many :employees, through: :trainings
 
-  validates :name, presence: true
+  validates :task_name, presence: true
 end

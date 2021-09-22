@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_09_12_000003) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string "name"
+    t.string "task_name"
     t.integer "public_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
